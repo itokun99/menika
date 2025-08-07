@@ -1,4 +1,4 @@
-import { AppQueryProvider } from '@core/libs';
+import { AppQueryProvider, AppThemeProvider } from '@core/libs';
 import { NetworkStatusIndicator } from '@features/_global';
 import { StatusBar, useColorScheme } from 'react-native';
 import FlashMessage from 'react-native-flash-message';
@@ -35,7 +35,9 @@ export const App = () => {
     <GestureHandlerRootView>
       <SafeAreaProvider>
         <AppQueryProvider>
-          <AppComponent />
+          <AppThemeProvider>
+            <AppComponent />
+          </AppThemeProvider>
         </AppQueryProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
