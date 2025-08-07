@@ -7,6 +7,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import { AppNavigation } from './Navigation';
 
 export const AppComponent = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -18,6 +19,7 @@ export const AppComponent = () => {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={'red'}
       />
+      <AppNavigation />
       <NetworkStatusIndicator />
       <FlashMessage
         position="top"
