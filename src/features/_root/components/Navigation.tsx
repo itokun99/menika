@@ -1,4 +1,4 @@
-import { appTheme } from '@core/libs';
+import { appTheme, nativeSplashScreen } from '@core/libs';
 import { LoginScreen, RegisterScreen } from '@features/auth';
 import { HomeScreen } from '@features/home';
 import { LandingScreen } from '@features/onboarding';
@@ -21,5 +21,14 @@ const RootStack = createNativeStackNavigator({
 const Navigation = createStaticNavigation(RootStack);
 
 export const AppNavigation = () => {
-  return <Navigation theme={appTheme} />;
+  return (
+    <Navigation
+      theme={appTheme}
+      onReady={() => {
+        setTimeout(() => {
+          nativeSplashScreen.hide();
+        }, 3000);
+      }}
+    />
+  );
 };
