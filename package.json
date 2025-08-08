@@ -7,6 +7,7 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
+    "generate:images": "node ./scripts/generate-image-list.js",
     "test": "jest"
   },
   "dependencies": {
