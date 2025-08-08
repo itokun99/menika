@@ -6313,6 +6313,11 @@ react-native-bootsplash@^6.3.10:
     ts-dedent "^2.2.0"
     xml-formatter "^3.6.5"
 
+react-native-config@^1.5.6:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.5.6.tgz#78e250d769be74ac0eff0eccf99ef658f33dabbf"
+  integrity sha512-UB3LEco0FGGbbGvS+DfH2VmGKiP/y5C2MkmfBmfsIaxHSbM1KOTMKYG7YRf6xFhZbJ/01BedHG7SIny5i7N9BQ==
+
 react-native-flash-message@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/react-native-flash-message/-/react-native-flash-message-0.4.2.tgz#ed8ffe60c532bc1274c3b49a60dd0bd2fca59c50"

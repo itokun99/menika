@@ -13,6 +13,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		328C8F5624DA44AE859FFD84 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFCA1F37C314C359D5358D1 /* BootSplash.storyboard */; };
 		867F626BD62D404C87960E9B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABA8F98119A48C09DC42C5C /* Colors.xcassets */; };
+		B4A2649A28534884B4402B69 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 968D307346F140FEB8A22CB7 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		5FFCA1F37C314C359D5358D1 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "menika/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		DABA8F98119A48C09DC42C5C /* Colors.xcassets */ = {isa = PBXFileReference; name = "Colors.xcassets"; path = "menika/Colors.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
+		968D307346F140FEB8A22CB7 /* Config.xcconfig */ = {isa = PBXFileReference; name = "Config.xcconfig"; path = "Config.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.xcconfig; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				968D307346F140FEB8A22CB7 /* Config.xcconfig */,
 				13B07FAE1A68108700A75B9A /* menika */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A2649A28534884B4402B69 /* Config.xcconfig in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				328C8F5624DA44AE859FFD84 /* BootSplash.storyboard in Resources */,
@@ -419,6 +423,7 @@
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
+			baseConfigurationReference = 968D307346F140FEB8A22CB7 /* Config.xcconfig */;
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -485,6 +490,7 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+			baseConfigurationReference = 968D307346F140FEB8A22CB7 /* Config.xcconfig */;
 		};
 /* End XCBuildConfiguration section */
 
