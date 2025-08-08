@@ -9,6 +9,7 @@ import {
   DefaultTheme as NavigationDefaultTheme,
 } from '@react-navigation/native';
 import merge from 'deepmerge';
+import { colors } from '@core/styles';
 
 const { LightTheme } = adaptNavigationTheme({
   reactNavigationLight: NavigationDefaultTheme,
@@ -17,7 +18,14 @@ const { LightTheme } = adaptNavigationTheme({
 
 const CombinedDefaultTheme = merge(MD3LightTheme, LightTheme);
 
-export const appTheme = CombinedDefaultTheme;
+export const appTheme = merge(CombinedDefaultTheme, {
+  colors: {
+    primary: colors.primary,
+    secondary: colors.secondary,
+    error: colors.error,
+    success: colors.success,
+  },
+});
 
 export const AppThemeProvider = ({ children }: PropsWithChildren) => {
   return <PaperProvider theme={appTheme}>{children}</PaperProvider>;
