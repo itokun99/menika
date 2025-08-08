@@ -1,4 +1,5 @@
 import { appTheme, nativeSplashScreen } from '@core/libs';
+import { RouteNames } from '@core/models';
 import { LoginScreen, RegisterScreen } from '@features/auth';
 import { HomeScreen } from '@features/home';
 import { LandingScreen } from '@features/onboarding';
@@ -11,10 +12,10 @@ const RootStack = createNativeStackNavigator({
     headerShown: false,
   },
   screens: {
-    landing: LandingScreen,
-    login: LoginScreen,
-    register: RegisterScreen,
-    home: HomeScreen,
+    [RouteNames.landing]: LandingScreen,
+    [RouteNames.login]: LoginScreen,
+    [RouteNames.register]: RegisterScreen,
+    [RouteNames.home]: HomeScreen,
   },
 });
 

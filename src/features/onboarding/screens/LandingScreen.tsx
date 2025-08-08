@@ -1,10 +1,21 @@
 import { imageList } from '@core/assets';
+import { RouteNames } from '@core/models';
 import { appStyles, spacing } from '@core/styles';
+import { useNavigation } from '@react-navigation/native';
+import { useEffect } from 'react';
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const LandingScreen = () => {
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate(RouteNames.home as never);
+    }, 3000);
+  }, [navigation]);
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
