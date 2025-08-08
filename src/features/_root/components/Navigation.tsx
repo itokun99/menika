@@ -25,9 +25,7 @@ export const AppNavigation = () => {
     <Navigation
       theme={appTheme}
       onReady={() => {
-        setTimeout(() => {
-          nativeSplashScreen.hide();
-        }, 3000);
+        nativeSplashScreen.hide();
       }}
     />
   );
