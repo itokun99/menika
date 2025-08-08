@@ -2,12 +2,12 @@ import { appTheme, nativeSplashScreen } from '@core/libs';
 import { RouteNames } from '@core/models';
 import { LoginScreen, RegisterScreen } from '@features/auth';
 import { HomeScreen } from '@features/home';
-import { LandingScreen } from '@features/onboarding';
+import { LandingScreen, OnboardingScreen } from '@features/onboarding';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const RootStack = createNativeStackNavigator({
-  initialRouteName: 'landing',
+  initialRouteName: RouteNames.landing,
   screenOptions: {
     headerShown: false,
   },
@@ -16,6 +16,7 @@ const RootStack = createNativeStackNavigator({
     [RouteNames.login]: LoginScreen,
     [RouteNames.register]: RegisterScreen,
     [RouteNames.home]: HomeScreen,
+    [RouteNames.onboarding]: OnboardingScreen,
   },
 });
 

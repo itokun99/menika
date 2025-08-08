@@ -1,20 +1,30 @@
 import { imageList } from '@core/assets';
+import { appStorageAction } from '@core/libs/storage';
 import { RouteNames } from '@core/models';
 import { appStyles, spacing } from '@core/styles';
-import { useNavigation } from '@react-navigation/native';
+import { StackActions, useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react';
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const LandingScreen = () => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   //
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     navigation.navigate(RouteNames.home as never);
-  //   }, 3000);
-  // }, [navigation]);
+  useEffect(() => {
+    setTimeout(() => {
+      const onboardingVisibility = appStorageAction.getShowOnboarding();
+      const isShowOnboarding =
+        typeof onboardingVisibility === 'undefined' || onboardingVisibility;
+      if (isShowOnboarding) {
+        navigation.dispatch(
+          StackActions.replace(RouteNames.onboarding as never),
+        );
+        return;
+      }
+      navigation.dispatch(StackActions.replace(RouteNames.home as never));
+    }, 3000);
+  }, [navigation]);
 
   return (
     <SafeAreaView style={styles.container}>
