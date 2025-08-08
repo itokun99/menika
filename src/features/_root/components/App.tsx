@@ -8,6 +8,7 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import { AppNavigation } from './Navigation';
+import { AuthContextProvider } from '@core/states';
 
 export const AppComponent = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -32,14 +33,16 @@ export const AppComponent = () => {
 
 export const App = () => {
   return (
-    <GestureHandlerRootView>
-      <SafeAreaProvider>
-        <AppQueryProvider>
-          <AppThemeProvider>
-            <AppComponent />
-          </AppThemeProvider>
-        </AppQueryProvider>
-      </SafeAreaProvider>
-    </GestureHandlerRootView>
+    <AppQueryProvider>
+      <AuthContextProvider>
+        <GestureHandlerRootView>
+          <SafeAreaProvider>
+            <AppThemeProvider>
+              <AppComponent />
+            </AppThemeProvider>
+          </SafeAreaProvider>
+        </GestureHandlerRootView>
+      </AuthContextProvider>
+    </AppQueryProvider>
   );
 };
