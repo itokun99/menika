@@ -4,4 +4,7 @@ export const APP_CONFIG = {
   api: {
     baseUrl: Config.API_BASE_URL || '',
   },
+  storage: {
+    encryptionKey: Config.API_BASE_URL || ''
+  }
 } as const;

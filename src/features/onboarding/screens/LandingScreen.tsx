@@ -8,13 +8,13 @@ import { ActivityIndicator } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const LandingScreen = () => {
-  const navigation = useNavigation();
-
-  useEffect(() => {
-    setTimeout(() => {
-      navigation.navigate(RouteNames.home as never);
-    }, 3000);
-  }, [navigation]);
+  // const navigation = useNavigation();
+  //
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     navigation.navigate(RouteNames.home as never);
+  //   }, 3000);
+  // }, [navigation]);
 
   return (
     <SafeAreaView style={styles.container}>

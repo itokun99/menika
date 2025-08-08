@@ -27,6 +27,11 @@ export const NetworkStatusIndicator = React.memo(() => {
       }
     });
 
+    showMessage({
+      message: 'You are connected!',
+      type: 'success',
+    });
+
     return () => {
       unsubs();
     };
