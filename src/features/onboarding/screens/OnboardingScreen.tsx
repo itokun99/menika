@@ -1,7 +1,15 @@
 import { imageList } from '@core/assets';
 import { appStorageAction } from '@core/libs/storage';
 import { RouteNames } from '@core/models';
-import { appStyles, colors, fontWeights, fonts, spacing } from '@core/styles';
+import {
+  appStyles,
+  colors,
+  fontFamilies,
+  fontSizes,
+  fontWeights,
+  fonts,
+  spacing,
+} from '@core/styles';
 import { Button } from '@features/_global';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
@@ -25,9 +33,9 @@ export const OnboardingScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={[appStyles.flexFill, appStyles.flexCenter]}>
-        <View style={[appStyles.flexCenter]}>
+        <View style={styles.content}>
           <Image source={imageList.imgOnboard} style={styles.img} />
-          <Text variant="titleLarge" style={styles.textContent}>
+          <Text variant="headlineSmall" style={styles.textContent}>
             {t('onboarding.title')}
           </Text>
         </View>
@@ -51,7 +59,6 @@ const styles = StyleSheet.create({
   },
   textContent: {
     textAlign: 'center',
-    fontWeight: fontWeights.bold,
   },
   footer: {
     marginBottom: spacing.lg,
@@ -60,5 +67,9 @@ const styles = StyleSheet.create({
   img: {
     width: Dimensions.get('window').width * 0.8,
     height: Dimensions.get('window').width * 0.8,
+  },
+  content: {
+    ...appStyles.flexCenter,
+    paddingHorizontal: spacing.lg,
   },
 });

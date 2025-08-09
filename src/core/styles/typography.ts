@@ -1,22 +1,21 @@
-import { Platform } from 'react-native';
+const FONT_FAMILY_REGULAR = 'Geist-Regular';
+const FONT_FAMILY_MEDIUM = 'Geist-Medium';
+const FONT_FAMILY_BOLD = 'Geist-Bold';
+const FONT_FAMILY_BLACK = 'Geist-ExtraBold';
+const FONT_FAMILY_LIGHT = 'Geist-Light';
 
-/**
- * @fileoverview
- * Defines the typography system for the application, including font families,
- * sizes, and weights.
- */
-
-// Definisikan nama font Anda. Ini membantu jika Anda perlu mengganti font di masa depan.
-export const fonts = {
-  primary: Platform.select({
-    ios: 'Helvetica',
-    android: 'Roboto',
-    default: 'system',
-  }),
-  // Anda bisa menambahkan font lain, misal: 'primaryBold', 'secondary', dll.
+export const fontFamilies = {
+  regular: FONT_FAMILY_REGULAR,
+  medium: FONT_FAMILY_MEDIUM,
+  bold: FONT_FAMILY_BOLD,
+  black: FONT_FAMILY_BLACK,
+  light: FONT_FAMILY_LIGHT,
 };
 
-// Skala ukuran font
+export const fonts = {
+  primary: 'Geist',
+};
+
 export const fontSizes = {
   xs: 12,
   sm: 14,
