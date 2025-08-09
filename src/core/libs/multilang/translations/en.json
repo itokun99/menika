@@ -1,0 +1,45 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again later.",
+    "success": "Operation completed successfully.",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "authentication": {
+    "login": {
+      "title": "Log in to your account",
+      "emailPlaceholder": "Enter your email",
+      "passwordPlaceholder": "Enter your password",
+      "forgotPassword": "Forgot password?",
+      "loginButton": "Log In",
+      "registerPrompt": "Don't have an account? Register now"
+    },
+    "register": {
+      "title": "Create a new account",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "Enter your email",
+      "passwordPlaceholder": "Create a password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "registerButton": "Register"
+    },
+    "resetPassword": {
+      "title": "Reset your password",
+      "emailPlaceholder": "Enter your email to receive the reset link",
+      "sendLinkButton": "Send Reset Link"
+    }
+  },
+  "onboarding": {
+    "title": "Make your dream wedding a reality, all in one app",
+    "description": "Easily plan your wedding, from choosing vendors to managing your budget, all in one app.",
+    "cta": {
+      "startPlanning": "Start Planning Now",
+      "continueAsGuest": "Continue as Guest"
+    }
+  }
+}

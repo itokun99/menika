@@ -1,0 +1,41 @@
+{
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan, silakan coba lagi.",
+    "noData": "Tidak ada data yang tersedia.",
+    "save": "Simpan",
+    "cancel": "Batalkan",
+    "delete": "Hapus",
+    "edit": "Sunting",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus ini?",
+    "yes": "Ya",
+    "no": "Tidak"
+  },
+  "authentication": {
+    "login": {
+      "title": "Masuk ke akun Anda",
+      "emailPlaceholder": "Masukkan email Anda",
+      "passwordPlaceholder": "Masukkan kata sandi Anda",
+      "forgotPassword": "Lupa kata sandi?",
+      "loginButton": "Masuk",
+      "registerPrompt": "Belum punya akun? Daftar sekarang"
+    },
+    "register": {
+      "title": "Buat akun baru",
+      "namePlaceholder": "Masukkan nama Anda",
+      "emailPlaceholder": "Masukkan email Anda",
+      "passwordPlaceholder": "Buat kata sandi",
+      "confirmPasswordPlaceholder": "Konfirmasi kata sandi",
+      "registerButton": "Daftar"
+    },
+    "resetPassword": {
+      "title": "Atur ulang kata sandi Anda",
+      "emailPlaceholder": "Masukkan email Anda untuk menerima tautan atur ulang",
+      "sendLinkButton": "Kirim tautan atur ulang"
+    }
+  },
+  "onboarding": {
+    "title": "Wujudkan pernikahan impian Anda, dalam satu aplikasi",
+    "description": "Buat rencana pernikahan Anda dengan mudah, mulai dari memilih vendor hingga mengelola anggaran, semua dalam satu aplikasi."
+  }
+}

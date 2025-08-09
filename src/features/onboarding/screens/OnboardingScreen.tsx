@@ -1,14 +1,16 @@
 import { imageList } from '@core/assets';
 import { appStorageAction } from '@core/libs/storage';
 import { RouteNames } from '@core/models';
-import { appStyles, colors, spacing } from '@core/styles';
+import { appStyles, colors, fontWeights, fonts, spacing } from '@core/styles';
 import { Button } from '@features/_global';
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 import { Dimensions, Image, StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const OnboardingScreen = () => {
+  const { t } = useTranslation();
   const navigation = useNavigation();
 
   const handlePressSignIn = () => {
@@ -26,16 +28,16 @@ export const OnboardingScreen = () => {
         <View style={[appStyles.flexCenter]}>
           <Image source={imageList.imgOnboard} style={styles.img} />
           <Text variant="titleLarge" style={styles.textContent}>
-            {'Wujudkan pernikahannya sesuai mimpimu bersama pasangan'}
+            {t('onboarding.title')}
           </Text>
         </View>
       </View>
       <View style={styles.footer}>
         <Button mode="contained" onPress={handlePressSignIn}>
-          {'Masuk / Daftar'}
+          {t('onboarding.cta.startPlanning')}
         </Button>
         <Button mode="text" onPress={handlePressGuest}>
-          {'Masuk sebagai tamu'}
+          {t('onboarding.cta.continueAsGuest')}
         </Button>
       </View>
     </SafeAreaView>
@@ -49,6 +51,7 @@ const styles = StyleSheet.create({
   },
   textContent: {
     textAlign: 'center',
+    fontWeight: fontWeights.bold,
   },
   footer: {
     marginBottom: spacing.lg,

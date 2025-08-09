@@ -1,4 +1,8 @@
-import { AppQueryProvider, AppThemeProvider } from '@core/libs';
+import {
+  AppQueryProvider,
+  AppThemeProvider,
+  setupLanguageTranslation,
+} from '@core/libs';
 import { NetworkStatusIndicator } from '@features/_global';
 import { StatusBar, useColorScheme } from 'react-native';
 import FlashMessage from 'react-native-flash-message';
@@ -9,6 +13,10 @@ import {
 } from 'react-native-safe-area-context';
 import { AppNavigation } from './Navigation';
 import { AuthContextProvider } from '@core/states';
+import { useEffect } from 'react';
+
+// init language translation
+setupLanguageTranslation();
 
 export const AppComponent = () => {
   const isDarkMode = useColorScheme() === 'dark';

@@ -7,7 +7,7 @@ import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const RootStack = createNativeStackNavigator({
-  initialRouteName: RouteNames.landing,
+  initialRouteName: RouteNames.onboarding,
   screenOptions: {
     headerShown: false,
   },
