@@ -20,6 +20,10 @@ const { LightTheme } = adaptNavigationTheme({
 
 const CombinedDefaultTheme = merge(MD3LightTheme, LightTheme);
 
+const baseFont = {
+  fontFamily: fontFamilies.regular,
+};
+
 export const appTheme = merge(CombinedDefaultTheme, {
   colors: {
     primary: colors.primary,
@@ -29,7 +33,21 @@ export const appTheme = merge(CombinedDefaultTheme, {
   },
   fonts: configureFonts({
     config: {
-      fontFamily: fontFamilies.regular,
+      displayLarge: { ...baseFont, fontFamily: fontFamilies.bold },
+      displayMedium: { ...baseFont, fontFamily: fontFamilies.bold },
+      displaySmall: { ...baseFont, fontFamily: fontFamilies.bold },
+      headlineLarge: { ...baseFont, fontFamily: fontFamilies.bold },
+      headlineMedium: { ...baseFont, fontFamily: fontFamilies.bold },
+      headlineSmall: { ...baseFont, fontFamily: fontFamilies.bold },
+      titleLarge: { ...baseFont, fontFamily: fontFamilies.bold },
+      titleMedium: { ...baseFont, fontFamily: fontFamilies.bold },
+      titleSmall: { ...baseFont, fontFamily: fontFamilies.bold },
+      bodyLarge: { ...baseFont },
+      bodyMedium: { ...baseFont },
+      bodySmall: { ...baseFont },
+      labelLarge: { ...baseFont, fontFamily: fontFamilies.medium },
+      labelMedium: { ...baseFont, fontFamily: fontFamilies.medium },
+      labelSmall: { ...baseFont, fontFamily: fontFamilies.medium },
     },
     isV3: true,
   }),
