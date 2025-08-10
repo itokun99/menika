@@ -11,4 +11,6 @@ export const appStorageAction = {
   setAuthToken: (token: string) => appStorage.set('authToken', token),
   getShowOnboarding: () => appStorage.getBoolean('onboarding'),
   setShowOnboarding: (value: boolean) => appStorage.set('onboarding', value),
+  getLanguage: () => appStorage.getString('language'),
+  setLanguage: (language: string) => appStorage.set('language', language),
 };

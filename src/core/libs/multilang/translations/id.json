@@ -9,11 +9,31 @@
     "edit": "Sunting",
     "confirmDelete": "Apakah Anda yakin ingin menghapus ini?",
     "yes": "Ya",
-    "no": "Tidak"
+    "no": "Tidak",
+    "fullname": "Nama Lengkap",
+    "email": "Email",
+    "password": "Kata Sandi",
+    "confirmPassword": "Konfirmasi Kata Sandi",
+    "next": "Selanjutnya",
+    "continue": "Lanjutkan",
+    "emailPlaceholder": "Masukkan email Anda",
+    "passwordPlaceholder": "Masukkan kata sandi Anda",
+    "confirmPasswordPlaceholder": "Konfirmasi kata sandi Anda",
+    "namePlaceholder": "Masukkan nama lengkap Anda"
+  },
+  "validation": {
+    "required": "Bidang ini harus diisi.",
+    "email": "Silakan masukkan alamat email yang valid.",
+    "passwordLength": "Kata sandi harus terdiri dari minimal {{count}} karakter.",
+    "minLength": "Bidang ini harus memiliki setidaknya {{count}} karakter.",
+    "maxLength": "Bidang ini tidak boleh lebih dari {{count}} karakter.",
+    "pattern": "Format tidak valid.",
+    "passwordsMatch": "Kata sandi tidak cocok."
   },
   "authentication": {
     "login": {
-      "title": "Masuk ke akun Anda",
+      "title": "Selamat Datang Kembali!",
+      "description": "Masuk untuk melanjutkan perencanaan hari bahagiamu.",
       "emailPlaceholder": "Masukkan email Anda",
       "passwordPlaceholder": "Masukkan kata sandi Anda",
       "forgotPassword": "Lupa kata sandi?",
@@ -21,12 +41,15 @@
       "registerPrompt": "Belum punya akun? Daftar sekarang"
     },
     "register": {
-      "title": "Buat akun baru",
-      "namePlaceholder": "Masukkan nama Anda",
-      "emailPlaceholder": "Masukkan email Anda",
+      "title": "Mulai Rencanakan Momen Terbaikmu",
+      "description": "Buat akun hanya dalam beberapa langkah mudah.",
+      "namePlaceholder": "Masukan nama lengkap",
+      "emailPlaceholder": "Masukan email",
       "passwordPlaceholder": "Buat kata sandi",
       "confirmPasswordPlaceholder": "Konfirmasi kata sandi",
-      "registerButton": "Daftar"
+      "registerButton": "Buat Akun",
+      "alreadyRegistered": "Sudah punya akun? Masuk sekarang",
+      "termsAndConditions": "Dengan membuat akun, Anda setuju dengan syarat dan ketentuan kami."
     },
     "resetPassword": {
       "title": "Atur ulang kata sandi Anda",
@@ -35,7 +58,11 @@
     }
   },
   "onboarding": {
-    "title": "Wujudkan pernikahan impian Anda, dalam satu aplikasi",
-    "description": "Buat rencana pernikahan Anda dengan mudah, mulai dari memilih vendor hingga mengelola anggaran, semua dalam satu aplikasi."
+    "title": "Wujudkan Pernikahan Impianmu",
+    "description": "Temukan ribuan inspirasi dan vendor terkurasi yang sesuai dengan gayamu, semuanya dalam satu genggaman.",
+    "cta": {
+      "startPlanning": "Mulai Sekarang",
+      "continueAsGuest": "Lanjut sebagai Tamu"
+    }
   }
 }

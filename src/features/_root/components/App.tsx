@@ -4,7 +4,7 @@ import {
   setupLanguageTranslation,
 } from '@core/libs';
 import { NetworkStatusIndicator } from '@features/_global';
-import { StatusBar, useColorScheme } from 'react-native';
+import { Appearance, StatusBar } from 'react-native';
 import FlashMessage from 'react-native-flash-message';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {
@@ -14,20 +14,22 @@ import {
 import { AppNavigation } from './Navigation';
 import { AuthContextProvider } from '@core/states';
 import { useEffect } from 'react';
+import { colors } from '@core/styles';
+import { KeyboardProvider } from 'react-native-keyboard-controller';
 
 // init language translation
 setupLanguageTranslation();
 
 export const AppComponent = () => {
-  const isDarkMode = useColorScheme() === 'dark';
   const insets = useSafeAreaInsets();
+
+  useEffect(() => {
+    Appearance.setColorScheme('light');
+  }, []);
 
   return (
     <SafeAreaProvider>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={'red'}
-      />
+      <StatusBar barStyle={'dark-content'} backgroundColor={colors.white} />
       <AppNavigation />
       <NetworkStatusIndicator />
       <FlashMessage
@@ -43,13 +45,13 @@ export const App = () => {
   return (
     <AppQueryProvider>
       <AuthContextProvider>
-        <GestureHandlerRootView>
-          <SafeAreaProvider>
-            <AppThemeProvider>
+        <AppThemeProvider>
+          <GestureHandlerRootView>
+            <KeyboardProvider navigationBarTranslucent statusBarTranslucent>
               <AppComponent />
-            </AppThemeProvider>
-          </SafeAreaProvider>
-        </GestureHandlerRootView>
+            </KeyboardProvider>
+          </GestureHandlerRootView>
+        </AppThemeProvider>
       </AuthContextProvider>
     </AppQueryProvider>
   );

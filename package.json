@@ -8,9 +8,11 @@
     "lint": "eslint .",
     "start": "ENVFILE=.env react-native start --client-logs",
     "generate:images": "node ./scripts/generate-image-list.js",
-    "test": "jest"
+    "test": "jest",
+    "watchman-fresh": "watchman watch-del '/Users/aleph/Documents/projects/menika'"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
     "@react-native-community/netinfo": "^11.4.1",
     "@react-native-masked-view/masked-view": "^0.3.2",
     "@react-native-vector-icons/material-design-icons": "^12.3.0",
@@ -22,21 +24,27 @@
     "deepmerge": "^4.3.1",
     "i18next": "^25.3.2",
     "react": "19.1.0",
+    "react-hook-form": "^7.62.0",
     "react-i18next": "^15.6.1",
     "react-native": "0.80.2",
     "react-native-bootsplash": "^6.3.10",
     "react-native-config": "^1.5.6",
     "react-native-flash-message": "^0.4.2",
     "react-native-gesture-handler": "^2.28.0",
+    "react-native-keyboard-controller": "^1.18.3",
     "react-native-localize": "^3.5.1",
     "react-native-mmkv": "^3.3.0",
     "react-native-paper": "^5.14.5",
+    "react-native-reanimated": "^4.0.2",
     "react-native-safe-area-context": "^5.5.2",
     "react-native-screens": "^4.13.1",
-    "react-native-toast-message": "^2.3.3"
+    "react-native-toast-message": "^2.3.3",
+    "react-native-worklets": "^0.4.1",
+    "zod": "^4.0.16"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-export-namespace-from": "^7.27.1",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
     "@react-native-community/cli": "19.1.1",

@@ -9,11 +9,31 @@
     "edit": "Edit",
     "delete": "Delete",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "fullname": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "next": "Next",
+    "continue": "Continue",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "namePlaceholder": "Enter your full name"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address.",
+    "passwordLength": "Password must be at least {{count}} characters long.",
+    "minLength": "This field must have at least {{count}} characters.",
+    "maxLength": "This field must not exceed {{count}} characters.",
+    "pattern": "Invalid format.",
+    "passwordsMatch": "Passwords do not match."
   },
   "authentication": {
     "login": {
-      "title": "Log in to your account",
+      "title": "Welcome Back!",
+      "description": "Log in to continue planning your big day.",
       "emailPlaceholder": "Enter your email",
       "passwordPlaceholder": "Enter your password",
       "forgotPassword": "Forgot password?",
@@ -21,12 +41,15 @@
       "registerPrompt": "Don't have an account? Register now"
     },
     "register": {
-      "title": "Create a new account",
+      "title": "Welcome Back!",
+      "description": "Log in to continue planning your big day.",
       "namePlaceholder": "Enter your name",
       "emailPlaceholder": "Enter your email",
       "passwordPlaceholder": "Create a password",
       "confirmPasswordPlaceholder": "Confirm your password",
-      "registerButton": "Register"
+      "registerButton": "Create Account",
+      "alreadyRegistered": "Already have an account? Log in now",
+      "termsAndConditions": "By creating an account, you agree to our terms and conditions."
     },
     "resetPassword": {
       "title": "Reset your password",
@@ -35,10 +58,10 @@
     }
   },
   "onboarding": {
-    "title": "Make your dream wedding a reality, all in one app",
-    "description": "Easily plan your wedding, from choosing vendors to managing your budget, all in one app.",
+    "title": "Bring Your Dream Wedding to Life",
+    "description": "Discover thousands of curated inspirations and vendors that match your style, all in one place.",
     "cta": {
-      "startPlanning": "Start Planning Now",
+      "startPlanning": "Get Started",
       "continueAsGuest": "Continue as Guest"
     }
   }
