@@ -1,16 +1,8 @@
 import { imageList } from '@core/assets';
 import { appStorageAction } from '@core/libs/storage';
 import { RouteNames } from '@core/models';
-import {
-  appStyles,
-  colors,
-  fontFamilies,
-  fontSizes,
-  fontWeights,
-  fonts,
-  spacing,
-} from '@core/styles';
-import { Button } from '@features/_global';
+import { appStyles, colors, spacing } from '@core/styles';
+import { Button, LangSwitcher } from '@features/_global';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Dimensions, Image, StyleSheet, View } from 'react-native';
@@ -22,7 +14,7 @@ export const OnboardingScreen = () => {
   const navigation = useNavigation();
 
   const handlePressSignIn = () => {
-    navigation.navigate(RouteNames.login as never);
+    navigation.navigate(RouteNames.register as never);
   };
 
   const handlePressGuest = () => {
@@ -32,11 +24,17 @@ export const OnboardingScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.lang}>
+        <LangSwitcher />
+      </View>
       <View style={[appStyles.flexFill, appStyles.flexCenter]}>
         <View style={styles.content}>
           <Image source={imageList.imgOnboard} style={styles.img} />
-          <Text variant="headlineSmall" style={styles.textContent}>
+          <Text variant="headlineSmall" style={styles.headline}>
             {t('onboarding.title')}
+          </Text>
+          <Text variant="bodyMedium" style={styles.textContent}>
+            {t('onboarding.description')}
           </Text>
         </View>
       </View>
@@ -57,11 +55,17 @@ const styles = StyleSheet.create({
     ...appStyles.container,
     backgroundColor: colors.white,
   },
+  headline: {
+    textAlign: 'center',
+    marginBottom: spacing.xs,
+  },
+  description: {
+    textAlign: 'center',
+  },
   textContent: {
     textAlign: 'center',
   },
   footer: {
-    marginBottom: spacing.lg,
     gap: spacing.xs,
   },
   img: {
@@ -70,6 +74,9 @@ const styles = StyleSheet.create({
   },
   content: {
     ...appStyles.flexCenter,
-    paddingHorizontal: spacing.lg,
+  },
+  lang: {
+    ...appStyles.flexRow,
+    justifyContent: 'flex-end',
   },
 });
