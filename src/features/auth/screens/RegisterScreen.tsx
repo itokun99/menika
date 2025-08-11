@@ -30,7 +30,7 @@ export const RegisterScreen = () => {
       confirmPassword: '',
       termCondition: false,
     },
-    mode: 'all',
+    mode: 'onBlur',
   });
 
   const isDisabledButton =
@@ -39,8 +39,7 @@ export const RegisterScreen = () => {
     isLoading ||
     disabled ||
     isSubmitting ||
-    Object.keys(errors).length > 0 ||
-    Object.values(control._formValues).some(value => !value);
+    Object.keys(errors).length > 0;
 
   const handlePressLogin = () => {
     navigation.dispatch(StackActions.replace(RouteNames.login as never));

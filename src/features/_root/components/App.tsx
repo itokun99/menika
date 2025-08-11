@@ -14,7 +14,7 @@ import {
 import { AppNavigation } from './Navigation';
 import { AuthContextProvider } from '@core/states';
 import { useEffect } from 'react';
-import { colors } from '@core/styles';
+import { mainColors } from '@core/styles';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
 
 // init language translation
@@ -29,7 +29,7 @@ export const AppComponent = () => {
 
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={'dark-content'} backgroundColor={colors.white} />
+      <StatusBar barStyle={'dark-content'} backgroundColor={mainColors.white} />
       <AppNavigation />
       <NetworkStatusIndicator />
       <FlashMessage

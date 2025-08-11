@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useMemo } from 'react';
 import { createLoginSchema } from '../schemas';
 import { Button, TextInput } from '@features/_global';
-import { appStyles, spacing } from '@core/styles';
+import { spacing } from '@core/styles';
 import { Text } from 'react-native-paper';
 import { StackActions, useNavigation } from '@react-navigation/native';
 import { RouteNames } from '@core/models';
@@ -28,7 +28,7 @@ export const LoginScreen = () => {
       email: '',
       password: '',
     },
-    mode: 'all',
+    mode: 'onBlur',
   });
 
   const isDisabledButton =
@@ -37,8 +37,7 @@ export const LoginScreen = () => {
     isLoading ||
     disabled ||
     isSubmitting ||
-    Object.keys(errors).length > 0 ||
-    Object.values(control._formValues).some(value => !value);
+    Object.keys(errors).length > 0;
 
   const handlePressRegister = () => {
     navigation.dispatch(StackActions.replace(RouteNames.register as never));

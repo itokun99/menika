@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   wrapper: {
     overflow: 'hidden',
     borderRadius: spacing.xs,
-    backgroundColor: colors.grayLight,
+    backgroundColor: colors.primaryContainer,
     flexDirection: 'row',
   },
   btn: {
@@ -56,10 +56,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
   },
   btnText: {
-    color: colors.gray,
     fontFamily: fontFamilies.bold,
   },
   btnTextActive: {
-    color: colors.white,
+    color: colors.onPrimary,
   },
 });

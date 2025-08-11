@@ -1,10 +1,10 @@
 import { View } from 'react-native';
 import { Text } from 'react-native-paper';
 
-export const HomeScreen = () => {
+export const ProfileScreen = () => {
   return (
     <View>
-      <Text>Test</Text>
+      <Text>Profile Screen</Text>
     </View>
   );
 };

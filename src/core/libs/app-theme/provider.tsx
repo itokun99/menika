@@ -26,10 +26,7 @@ const baseFont = {
 
 export const appTheme = merge(CombinedDefaultTheme, {
   colors: {
-    primary: colors.primary,
-    secondary: colors.secondary,
-    error: colors.error,
-    success: colors.success,
+    ...colors,
   },
   fonts: configureFonts({
     config: {

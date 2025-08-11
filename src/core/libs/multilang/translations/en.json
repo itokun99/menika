@@ -21,6 +21,14 @@
     "confirmPasswordPlaceholder": "Confirm your password",
     "namePlaceholder": "Enter your full name"
   },
+  "routes": {
+    "home": "Home",
+    "homeLanding": "Home",
+    "profile": "Profile",
+    "inspiration": "Inspiration",
+    "vendor": "Vendors",
+    "planner": "Planner"
+  },
   "validation": {
     "required": "This field is required.",
     "email": "Please enter a valid email address.",

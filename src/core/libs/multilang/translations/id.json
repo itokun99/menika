@@ -21,6 +21,14 @@
     "confirmPasswordPlaceholder": "Konfirmasi kata sandi Anda",
     "namePlaceholder": "Masukkan nama lengkap Anda"
   },
+  "routes": {
+    "home": "Beranda",
+    "homeLanding": "Beranda",
+    "profile": "Profil",
+    "inspiration": "Inspirasi",
+    "vendor": "Vendor",
+    "planner": "Perencana"
+  },
   "validation": {
     "required": "Bidang ini harus diisi.",
     "email": "Silakan masukkan alamat email yang valid.",
